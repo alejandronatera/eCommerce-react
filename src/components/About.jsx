@@ -1,18 +1,14 @@
 function About() {
     
     return (
-      <section style={{ padding: "20px", maxWidth: "600px", margin: "auto" }}>
-        <h2>Sobre Nosotros</h2>
-        <p>
-          Bienvenido a nuestra tienda online. Nos especializamos en ofrecer
-          productos de alta calidad a precios accesibles. Nuestro objetivo es
-          brindarte una experiencia de compra simple, rápida y segura.
-        </p>
-        <p>
-          Ya sea que estés buscando tecnología, ropa, accesorios o más, en
-          nuestro e-commerce vas a encontrar lo que necesitás.
-        </p>
-      </section>
+      <section className="about">
+  <h2>Sobre Nosotros</h2>
+  <p>
+    Bienvenido a nuestra tienda online, donde la innovación y la comodidad se encuentran. Nuestro objetivo es ofrecerte una experiencia de compra ágil, segura y con productos de calidad.
+    Creemos en el poder de la tecnología para mejorar la vida cotidiana, por eso trabajamos continuamente en optimizar nuestra plataforma para que encuentres lo que necesitas de manera rápida y sencilla.
+    ¡Gracias por confiar en nosotros!
+  </p>
+</section>
     );
   }
   

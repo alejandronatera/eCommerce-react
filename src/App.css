@@ -21,3 +21,72 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+body {
+  background-color: #1E3A8A;
+  color: white;
+}
+
+button {
+  background-color: #00E6FF;
+  color: #222222;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.contact-details p {
+  color: #00E6FF;
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1E3A8A;
+  color: white;
+  margin: 0;
+}
+
+/* Modo escritorio (pantallas grandes) */
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/* Tabletas (pantallas medianas) */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-details {
+    text-align: center;
+  }
+}
+
+/* Teléfonos (pantallas pequeñas) */
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .contact form input,
+  .contact form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .contact-details p {
+    font-size: 0.9rem;
+  }
+}
+
+
+

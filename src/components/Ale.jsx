@@ -45,12 +45,7 @@ function ProductosContainer1({functionCarrito} ){
                  ))}
             </div>
 
-    // <div>
-//     <Carrito
-//         productosCarrito={productosCarrito}
-//         total={total}
-//     />
-// </div>
+                 
 
 
         )
