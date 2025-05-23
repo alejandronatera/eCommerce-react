@@ -13,3 +13,31 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px;
+    color: rgb(234, 227, 235);
+    background-color: rgb(202, 5, 5);
+    border-radius: 30px;
+    margin: 20px;
+    left: 20px;
+    font-size: 2em;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+}
+
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
