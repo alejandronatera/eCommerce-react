@@ -3,10 +3,10 @@ function Header() {
     <header
       style={{
         backgroundColor: "#003366",
-        padding: "10px 30px", // Aumentamos padding horizontal para margen izquierdo
+        padding: "10px 30px",
         display: "flex",
         alignItems: "center",
-        justifyContent: "flex-start", // Alinea a la izquierda
+        justifyContent: "flex-start",
         color: "white",
         position: "sticky",
         top: 0,
@@ -18,8 +18,8 @@ function Header() {
         src="/logo.jpg"
         alt="Logo de la página"
         style={{
-          height: "75px", // Antes era 50px. Esto es un 50% más grande
-          marginRight: "25px" // Más separación del texto
+          height: "100px", // Tamaño aumentado del logo
+          marginRight: "20px"
         }}
       />
       <h1 style={{ margin: 0, fontSize: "24px" }}>
@@ -28,3 +28,5 @@ function Header() {
     </header>
   );
 }
+
+export default Header;
