@@ -1,0 +1,41 @@
+.about {
+  padding: 20px;
+  text-align: center;
+}
+
+.about h2 {
+  color: white; /* Ahora el título es blanco */
+  margin-bottom: 20px;
+}
+
+.about-texto {
+  max-width: 9000px;
+  margin: 0 auto 40px auto;
+  text-align: left;     /* Alineado a la izquierda */
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgb(255, 255, 255);          /* Si el fondo es claro, lo dejamos así */
+  padding: 0 30px;       /* Un poco de padding lateral para pantallas pequeñas */
+}
+
+.imagenes-secundarias {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.imagen-item {
+  text-align: center;
+}
+
+.imagen-item img {
+  width: 350px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.descripcion-imagen {
+  margin-top: 10px;
+  font-size: 16px;

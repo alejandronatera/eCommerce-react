@@ -1,59 +1,96 @@
-.carrito-conteiner{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    height: 200px;
-    margin-top: 10px;
+.carrito-conteiner {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.carrito-titulos{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height: 30%;
-    width: 100%;
+.carrito-titulos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
 }
 
-.carrito-titulo-producto{
-    width: 20%;
+.carrito-titulo-producto,
+.carrito-titulo-descripcion,
+.carrito-titulo-cantidad,
+.carrito-titulo-precio,
+.carrito-titulo-subtotal {
+  flex: 1;
+  min-width: 100px;
 }
 
-.carrito-titulo-descripcion{
-    width: 30%;
+.carrito-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: bisque;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 10px;
 }
 
-.carrito-card{
-    border: solid;
-    border-color: black;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: bisque;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 100%;
+.carrito-producto,
+.descripcion-carrito,
+.carrito-cantidad,
+.carrito-precio,
+.carrito-subtotal,
+.carrito-boton {
+  flex: 1;
+  min-width: 100px;
+  text-align: center;
+}
+
+.carrito-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.boton-carrito {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ✅ RESPONSIVE para pantallas chicas */
+@media (max-width: 768px) {
+  .carrito-titulos {
+    display: none; /* Oculta los títulos en pantallas pequeñas */
+  }
+
+  .carrito-card {
+    flex-direction: column;
     text-align: center;
-    height: 150px;
-}
+    align-items: center;
+  }
 
-.carrito-producto{
-    width: 20%;
-}
+  .carrito-producto,
+  .descripcion-carrito,
+  .carrito-cantidad,
+  .carrito-precio,
+  .carrito-subtotal,
+  .carrito-boton {
+    width: 100%;
+  }
 
-.descripcion-carrito{
-    width: 30%;
-}
-
-.boton-carrito{
-    width: 3%;
-    height: 30%;
-}
-
-.carrito-image{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+  .carrito-image {
+    margin-bottom: 10px;
+  }
 }

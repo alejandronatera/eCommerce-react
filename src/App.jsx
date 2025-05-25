@@ -18,26 +18,21 @@ function App() {
   const [usuarioLogeado, setUsuarioLogeado] = useState(false)
   const [adminLogeado, setAdminLogeado] = useState(false)
 
-  function funcionCarrito(producto){
-    const existe = productosCarrito.find(p => p.id === producto.id);
-    console.log(existe)
-    if (existe) {
-        const carritoActualizado = productosCarrito.map((p) => {
-            if (p.id === producto.id){
-                const productoActualizado = {...p, cantidad: p.cantidad + producto.cantidad}
-                return productoActualizado
-            }else{
-                return p
-            }
-        })
-        setProductosCarrito(carritoActualizado)
-    }else{
-        // Si no existe, lo agregamos con su cantidad
-        const nuevoCarrito = [...productosCarrito, producto];
-        setProductosCarrito(nuevoCarrito)
-    }
+function funcionCarrito(producto) {
+  const existe = productosCarrito.find(p => p.id === producto.id);
 
+  if (existe) {
+    const carritoActualizado = productosCarrito.map(p =>
+      p.id === producto.id
+        ? { ...p, cantidad: p.cantidad + producto.cantidad }
+        : p
+    );
+    setProductosCarrito(carritoActualizado);
+  } else {
+    const nuevoCarrito = [...productosCarrito, producto];
+    setProductosCarrito(nuevoCarrito);
   }
+}
 
   function borrarProductoCarrito(id){
     console.log(id)
