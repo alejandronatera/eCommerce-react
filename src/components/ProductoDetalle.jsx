@@ -10,8 +10,6 @@ function ProductoDetalle({ funcionCarrito }) {
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(null);
 
-  console.log(id)
-
   useEffect(() => {
     fetch("https://68100d8b27f2fdac24101ef5.mockapi.io/productos")
       .then((res) => res.json())
@@ -33,8 +31,16 @@ function ProductoDetalle({ funcionCarrito }) {
 
   function agregarAlCarrito() {
     if (cantidad < 1) return;
+
+    // 👇 Nos aseguramos de que el campo `imagen` exista (por compatibilidad con `imagene`)
+    const productoFinal = {
+      ...producto,
+      imagen: producto.imagene || producto.imagen,
+      cantidad,
+    };
+
     dispararSweetBasico("Producto Agregado", "El producto fue agregado al carrito con éxito", "success", "Cerrar");
-    funcionCarrito({ ...producto, cantidad });
+    funcionCarrito(productoFinal);
   }
 
   function sumarContador() {
@@ -51,7 +57,11 @@ function ProductoDetalle({ funcionCarrito }) {
 
   return (
     <div className="detalle-container">
-      <img className="detalle-imagen" src={producto.imagen} alt={producto.name} />
+      <img
+        className="detalle-imagen"
+        src={producto.imagene || producto.imagen}
+        alt={producto.name}
+      />
       <div className="detalle-info">
         <h2>{producto.name}</h2>
         <p>{producto.description}</p>
