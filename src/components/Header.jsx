@@ -3,10 +3,10 @@ function Header() {
     <header
       style={{
         backgroundColor: "#003366",
-        padding: "10px",
+        padding: "10px 30px", // Aumentamos padding horizontal para margen izquierdo
         display: "flex",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "flex-start", // Alinea a la izquierda
         color: "white",
         position: "sticky",
         top: 0,
@@ -17,11 +17,14 @@ function Header() {
       <img
         src="/logo.jpg"
         alt="Logo de la página"
-        style={{ height: "50px", marginRight: "15px" }}
+        style={{
+          height: "75px", // Antes era 50px. Esto es un 50% más grande
+          marginRight: "25px" // Más separación del texto
+        }}
       />
-      <h1 style={{ margin: 0 }}>Bienvenidos a mi App React</h1>
+      <h1 style={{ margin: 0, fontSize: "24px" }}>
+        Bienvenidos a mi App React
+      </h1>
     </header>
   );
 }
-
-export default Header;
